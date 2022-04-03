@@ -90,6 +90,12 @@ build CMakeFiles/Taken.dir/GameManager.cpp.obj: CXX_COMPILER__Taken_Debug C$:/Us
   OBJECT_DIR = CMakeFiles\Taken.dir
   OBJECT_FILE_DIR = CMakeFiles\Taken.dir
 
+build CMakeFiles/Taken.dir/Direction.cpp.obj: CXX_COMPILER__Taken_Debug C$:/Users/dylan/Desktop/Everything,+but+Nothing/Programacion+Eliminar/Taken/Direction.cpp || cmake_object_order_depends_target_Taken
+  DEP_FILE = CMakeFiles\Taken.dir\Direction.cpp.obj.d
+  FLAGS = -g -std=gnu++17
+  OBJECT_DIR = CMakeFiles\Taken.dir
+  OBJECT_FILE_DIR = CMakeFiles\Taken.dir
+
 build CMakeFiles/Taken.dir/MatrixBuilder.cpp.obj: CXX_COMPILER__Taken_Debug C$:/Users/dylan/Desktop/Everything,+but+Nothing/Programacion+Eliminar/Taken/MatrixBuilder.cpp || cmake_object_order_depends_target_Taken
   DEP_FILE = CMakeFiles\Taken.dir\MatrixBuilder.cpp.obj.d
   FLAGS = -g -std=gnu++17
@@ -122,7 +128,7 @@ build CMakeFiles/Taken.dir/Ranking.cpp.obj: CXX_COMPILER__Taken_Debug C$:/Users/
 #############################################
 # Link the executable Taken.exe
 
-build Taken.exe: CXX_EXECUTABLE_LINKER__Taken_Debug CMakeFiles/Taken.dir/main.cpp.obj CMakeFiles/Taken.dir/Node.cpp.obj CMakeFiles/Taken.dir/Matrix.cpp.obj CMakeFiles/Taken.dir/Reader.cpp.obj CMakeFiles/Taken.dir/GameManager.cpp.obj CMakeFiles/Taken.dir/MatrixBuilder.cpp.obj CMakeFiles/Taken.dir/UtilityFunctions.cpp.obj CMakeFiles/Taken.dir/Player.cpp.obj CMakeFiles/Taken.dir/Ranking.cpp.obj
+build Taken.exe: CXX_EXECUTABLE_LINKER__Taken_Debug CMakeFiles/Taken.dir/main.cpp.obj CMakeFiles/Taken.dir/Node.cpp.obj CMakeFiles/Taken.dir/Matrix.cpp.obj CMakeFiles/Taken.dir/Reader.cpp.obj CMakeFiles/Taken.dir/GameManager.cpp.obj CMakeFiles/Taken.dir/Direction.cpp.obj CMakeFiles/Taken.dir/MatrixBuilder.cpp.obj CMakeFiles/Taken.dir/UtilityFunctions.cpp.obj CMakeFiles/Taken.dir/Player.cpp.obj CMakeFiles/Taken.dir/Ranking.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Taken.dir

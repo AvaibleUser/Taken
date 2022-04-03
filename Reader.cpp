@@ -1,5 +1,6 @@
 #include <string>
 #include <sstream>
+#include <iostream>
 #include <algorithm>
 #include "Reader.h"
 
@@ -19,15 +20,20 @@ void Reader::fillVector(const string &str) {
 Reader::Reader(string &str, bool readFile) {
     if (readFile) {
         ifstream stream(str);
+
+        if (!stream) {
+            std::cerr << "No se encontro el archivo o hubo un problema al abrirlo\n";
+            return;
+        }
         stringstream buffer;
         buffer << stream.rdbuf();
 
         string file = buffer.str();
 
-        replace(buffer.str().begin(), buffer.str().end(), '\n', ',');
-        replace(buffer.str().begin(), buffer.str().end(), ' ', '0');
-        replace(buffer.str().begin(), buffer.str().end(), 'x', '0');
-        fillVector(buffer.str());
+        replace(file.begin(), file.end(), '\n', ',');
+        replace(file.begin(), file.end(), ' ', '0');
+        replace(file.begin(), file.end(), 'x', '0');
+        fillVector(file);
     } else {
         replace(str.begin(), str.end(), ' ', '0');
         replace(str.begin(), str.end(), 'x', '0');
@@ -40,7 +46,7 @@ size_t *Reader::getVectorData() {
 }
 
 void Reader::copyDataToVector(vector<size_t> *vector) {
-    for (unsigned long long & i : vectorData) {
+    for (unsigned long long &i: vectorData) {
         vector->push_back(i);
     }
 }
