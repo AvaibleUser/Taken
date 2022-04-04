@@ -131,5 +131,9 @@ void GameManager::initGame() {
         rank = ranking->insert(playerRank);
         ranking = ranking->getRoot();
     }
-    cout << "\n\nSu posicion en el ranking del juego fue de... " << rank << "° lugar";
+    cout << "\n\nCalculando su posicion en el ranking del juego, espere un momento... " << endl;
+    cout << "Con un total de " << playerRank->steps << " pasos..." << endl;
+    cout << "Con " << playerRank->score << " puntos totales..." << endl;
+    cout << "Despues de una partida de " << playerRank->gameTime << " segundos..." << endl;
+    cout << "Su posicion fue " << rank << "° lugar";
 }
