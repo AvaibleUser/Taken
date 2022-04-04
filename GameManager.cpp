@@ -122,7 +122,8 @@ void GameManager::initGame() {
     cout << "\nPara guardar y mostrar su hazaña necesitaremos que nos proporcione";
     cout << "\n\tSu nombre:\t";
 
-    cin >> name;
+    cin.ignore();
+    getline(cin, name);
 
     auto *playerRank = new Player(name, matrix->getSteps(), finalTime.count(), matrix->calculateScore());
     if (ranking == nullptr) {
